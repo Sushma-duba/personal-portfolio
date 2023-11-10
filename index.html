@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/d3e9d01fa4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            <nav>
+                <img src="images/logo4.png" class="class">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div id="header-text">
+                <p>Frontend designer</p>
+                <h1>Hey, I'm <span>Sushma</span> from India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.jpg">
+                </div>
+                <div class="about-col-2"> 
+                    <h1>About me</h1>
+                    <p> my name is Sushma duba. currently i am pursuing engineering from mumbai university. i joinned engineering<br> in the 
+                        year 2021. engineering has given me lots of experience and memories. these experience will help me a lot to solve realtime 
+                         problems and has given me confidence to stand in todays industry. 
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skill</p>
+                        <p class="tab-links" onclick="opentab('Achivements')">Achievements</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tabs"id="skills">
+                         <ul>
+                            <li>Html</li>
+                            <li>css</li>
+                            <li>javascript</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="Achivements">
+                        <ul>
+                            <li>Ladies representative in th college council</li>
+                            <li>golden certificate for 108 suriya namaskar</li>
+                            <li>school level debate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        
+                        <ul>
+                            <li><span>2019</span><br>completed SSC from ryan group of Institutions</li>
+                            <li><span>2021</span><br>completed HSC from kle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------projects------>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My projects</h1>
+            <div class="project-list">
+                 <div>
+                    
+                    <h2>Home automation</h2>
+                    <p>using arduino uno kit</p>
+                    
+
+                 </div>
+                 <div>
+                    <h2>school management system</h2>
+                    <p>using python</p>
+                    
+
+                 </div>
+                 <div>
+                    <h2>Railway resrevation system</h2>
+                    <p>using html css javascript</p>
+                    
+                 </div>
+            </div>
+        </div>
+    </div>
+<!----------------contact--------->
+<div id="contact">
+    <div class="container">
+        <div class="columns">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>sushmaduba_iot_2021@ltce.in</p>
+                <p>09653153964</p>
+                 <div class="social-icons">
+                    <a href="https://instagram.com/sushma_2103?igshid=MXVsNnp0bm9lb210bA=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Sushma_Duba"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/sushma-duba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Sushma-duba"><i class="fa-brands fa-github"></i></a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tabs");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tabs");
+        }
+    </script>
+</body>
+</html>
